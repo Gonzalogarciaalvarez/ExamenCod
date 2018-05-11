@@ -36,6 +36,10 @@ public final class Cod implements ActionListener {
       String srcfiles = JOptionPane.showInputDialog("Archivo .jar (srcfiles)"); 
       String clase = JOptionPane.showInputDialog("Clase de la aplicacion (appclass)");
       String titulo = JOptionPane.showInputDialog("Titulo y nombre de la app");
+      
+      //Ahora que ya tenemos los datos necesarios, creamos la linea del comando para crear el .deb
+      
+      String comando ="javapackager -deploy -native deb"+" -Bcategory="+categoria+" -outdir "+outdir+" -outfile "+outfile+" -srcdir "+srcdir+" -srcfiles "+srcfiles+" -appclass "+clase+" -name "+titulo+" -title "+titulo;
 
-}
+    }
 }
