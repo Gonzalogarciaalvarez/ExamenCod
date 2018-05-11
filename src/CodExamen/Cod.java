@@ -7,6 +7,7 @@ package CodExamen;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionRegistration;
@@ -26,7 +27,15 @@ public final class Cod implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO implement action body
-        
-    }
+      // System.console().writer().println("javapackager -deploy -native exe packges -outfile Cod -srcdir dist -srcfiles Cod.jar -appclass Cod.java -name Cod -title Cod");
+      //Declaramos y lanzamos una ventana para obtener el valor de cada variable
+      String outdir = JOptionPane.showInputDialog("Direccion de salida(outdir)");
+      String outfile = JOptionPane.showInputDialog("Nombre del archivo (outfile)");
+      String categoria = JOptionPane.showInputDialog("Categoria (category)");
+      String srcdir = JOptionPane.showInputDialog("Direccion del src (srcdir)");
+      String srcfiles = JOptionPane.showInputDialog("Archivo .jar (srcfiles)"); 
+      String clase = JOptionPane.showInputDialog("Clase de la aplicacion (appclass)");
+      String titulo = JOptionPane.showInputDialog("Titulo y nombre de la app");
+
+}
 }
